@@ -33,7 +33,7 @@ class FoodCard extends StatelessWidget {
                   categoryName,
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16.0),
                 ),
-                Text(numberOfItems.toString()),
+                Text('$numberOfItems.toString() LKR'),
               ],
             ),
           ],
