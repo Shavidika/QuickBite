@@ -1,7 +1,7 @@
 import '../models/category_model.dart';
 
 final categories = [
-  Category('Burger', 'assets/images/burger.png', 43),
+  Category('Burgerrrr', 'assets/images/burger.png', 43),
   Category('Pizza', 'assets/images/pizza.png', 23),
   Category('Beer', 'assets/images/beer.png', 23),
   Category('Cheese', 'assets/images/cheeseburger.png', 23),
