@@ -9,13 +9,3 @@ final categories = [
   Category('Cupcake', 'assets/images/cupcake.png', 23),
 ];
 
-// hello
-
-// hello2
-
-// hgfgfgf
-
-//hjhb
-
-//jkhjkshdvsku
-//mm
