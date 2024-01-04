@@ -23,7 +23,7 @@ class FoodCategory extends StatelessWidget {
           return FoodCard(
             categoryName: _categories[index].categoryName,
             imagePath: _categories[index].imagePath,
-            numberOfItems: _categories[index].numberOfItems,
+            price: _categories[index].price,
           );
         },
       ),

@@ -3,12 +3,12 @@ import 'package:flutter/material.dart';
 class FoodCard extends StatelessWidget {
   final String categoryName;
   final String imagePath;
-  final int numberOfItems;
+  final int price;
 
   FoodCard({
     required this.categoryName,
     required this.imagePath,
-    required this.numberOfItems,
+    required this.price,
   });
 
   @override
@@ -24,7 +24,7 @@ class FoodCard extends StatelessWidget {
               width: 65.0,
             ),
             SizedBox(
-              width: 20.0,
+              width: 20.0, //the gap between the image and text
             ),
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -33,7 +33,7 @@ class FoodCard extends StatelessWidget {
                   categoryName,
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16.0),
                 ),
-                Text('$numberOfItems.toString() LKR'),
+                Text('${price.toString()} LKR'),
               ],
             ),
           ],
