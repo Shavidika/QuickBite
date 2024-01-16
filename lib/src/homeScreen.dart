@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quickbite/src/widgets/bought_foods.dart';
 import 'package:quickbite/src/widgets/food_card.dart';
 import 'package:quickbite/src/widgets/food_category.dart';
 import 'package:quickbite/src/widgets/home_top_info.dart';
@@ -20,6 +21,30 @@ class _HomeScreenState extends State<HomeScreen> {
         FoodCategory(),
         SizedBox(height: 20),
         Search(),
+        SizedBox(height: 20),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[
+            Text("Frequently Bought Foods",
+                style: TextStyle(
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.bold,
+                )),
+            GestureDetector(
+              onTap: () {},
+              child: Text("View All",
+                  style: TextStyle(
+                    fontSize: 18.0,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.orangeAccent,
+                  )),
+            )
+          ],
+        ),
+        SizedBox(height: 10.0),
+        Container(
+          child: BoughtFoods(),
+        )
       ],
     ));
   }
