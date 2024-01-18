@@ -15,66 +15,86 @@ class SignupPageState extends State<SignupPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 255, 255, 255),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 10.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'Sign Up',
-              style: TextStyle(
-                fontSize: 40.0,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            const SizedBox(
-              height: 100.0,
-            ),
-            Card(
-              child: Padding(
-                padding: const EdgeInsets.all(20.0),
-                child: Column(
-                  children: <Widget>[
-                    TextFormField(
-                      controller: _usernameController,
-                      decoration: const InputDecoration(
-                        labelText: 'Username',
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("assets/images/bg2.jpeg"),
+            fit: BoxFit.cover,
+          ),
+        ),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 10.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Card(
+                color: Colors.black
+                    .withOpacity(0.7), // Dark color with 70% opacity
+                child: Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: Column(
+                    children: <Widget>[
+                      const Text(
+                        'Sign Up',
+                        style: TextStyle(
+                          fontSize: 40.0,
+                          fontWeight: FontWeight.bold,
+                          color: Colors
+                              .white, // Text color set to white for visibility
+                        ),
                       ),
-                    ),
-                    TextFormField(
-                      controller: _emailController,
-                      decoration: const InputDecoration(
-                        labelText: 'Email',
+                      const SizedBox(
+                        height: 20.0, // Reduced height for better layout
                       ),
-                    ),
-                    TextFormField(
-                      controller: _passwordController,
-                      decoration: const InputDecoration(
-                        labelText: 'Password',
+                      TextFormField(
+                        controller: _usernameController,
+                        decoration: const InputDecoration(
+                          labelText: 'Username',
+                          labelStyle: TextStyle(
+                              color: Colors
+                                  .white), // Text color set to white for visibility
+                        ),
                       ),
-                      obscureText: true,
-                    ),
-                    const SizedBox(
-                      height: 20.0,
-                    ),
-                    ElevatedButton(
-                        onPressed: () {
-                          // Handle sign up action here
-                          print('Username: ${_usernameController.text}');
-                          print('Email: ${_emailController.text}');
-                          print('Password: ${_passwordController.text}');
-                        },
-                        child: const Text('Sign Up'),
-                        style: ButtonStyle(
-                          backgroundColor:
-                              MaterialStateProperty.all(Colors.blueAccent),
-                        )),
-                  ],
+                      TextFormField(
+                        controller: _emailController,
+                        decoration: const InputDecoration(
+                          labelText: 'Email',
+                          labelStyle: TextStyle(
+                              color: Colors
+                                  .white), // Text color set to white for visibility
+                        ),
+                      ),
+                      TextFormField(
+                        controller: _passwordController,
+                        decoration: const InputDecoration(
+                          labelText: 'Password',
+                          labelStyle: TextStyle(
+                              color: Colors
+                                  .white), // Text color set to white for visibility
+                        ),
+                        obscureText: true,
+                      ),
+                      const SizedBox(
+                        height: 20.0,
+                      ),
+                      ElevatedButton(
+                          onPressed: () {
+                            // Handle sign up action here
+                            print('Username: ${_usernameController.text}');
+                            print('Email: ${_emailController.text}');
+                            print('Password: ${_passwordController.text}');
+                          },
+                          child: const Text('Sign Up'),
+                          style: ButtonStyle(
+                            backgroundColor:
+                                MaterialStateProperty.all(Colors.blueAccent),
+                          )),
+                    ],
+                  ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
