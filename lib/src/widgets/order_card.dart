@@ -20,7 +20,7 @@ class _OrderCardState extends State<OrderCard> {
                 borderRadius: BorderRadius.circular(10.0),
               ),
               width: 45.0,
-              height: 73.0,
+              height: 80.0,
               child: Padding(
                 padding: EdgeInsets.symmetric(
                   horizontal: 10.0,
@@ -32,7 +32,7 @@ class _OrderCardState extends State<OrderCard> {
                         child: Icon(Icons.keyboard_arrow_up,
                             color: Color(0xFFD3D3D3))),
                     Text(
-                      "0",
+                      "1",
                       style: TextStyle(fontSize: 18.0, color: Colors.grey),
                     ),
                     InkWell(
@@ -74,7 +74,7 @@ class _OrderCardState extends State<OrderCard> {
                 ),
                 SizedBox(height: 5.0),
                 Text(
-                  "\u023B 3.0",
+                  "800.0 LKR",
                   style: TextStyle(
                       fontSize: 16.0,
                       color: Colors.orangeAccent,
@@ -99,7 +99,7 @@ class _OrderCardState extends State<OrderCard> {
                           InkWell(
                             onTap: () {},
                             child: Text(
-                              "x",
+                              " ",
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 color: Colors.red,

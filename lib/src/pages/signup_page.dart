@@ -65,7 +65,12 @@ class SignupPageState extends State<SignupPage> {
                           print('Email: ${_emailController.text}');
                           print('Password: ${_passwordController.text}');
                         },
-                        child: const Text('Sign Up'),
+                        child: const Text('Sign Up',
+                            style: TextStyle(
+                              fontSize: 20.0,
+                              fontWeight: FontWeight.normal,
+                              color: Colors.white,
+                            )),
                         style: ButtonStyle(
                           backgroundColor:
                               MaterialStateProperty.all(Colors.blueAccent),

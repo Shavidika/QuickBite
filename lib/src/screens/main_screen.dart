@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:quickbite/src/pages/home_page.dart';
 import 'package:quickbite/src/pages/order_page.dart';
 import 'package:quickbite/src/pages/profile_page.dart';
+import 'package:quickbite/src/pages/signin_page.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -23,7 +24,8 @@ class _MainScreenState extends State<MainScreen> {
     HomePage homePage = HomePage();
     OrderPage orderPage = OrderPage();
     ProfilePage profilePage = ProfilePage();
-    pages = [homePage, orderPage, profilePage];
+    SigninPage signinPage = SigninPage();
+    pages = [homePage, orderPage, signinPage];
 
     currentPage = homePage;
   }

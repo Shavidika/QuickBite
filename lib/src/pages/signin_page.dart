@@ -84,7 +84,14 @@ class SigninPageState extends State<SigninPage> {
                               print('Username: ${_usernameController.text}');
                               print('Password: ${_passwordController.text}');
                             },
-                            child: const Text('Sign In'),
+                            child: const Text(
+                              'Sign In',
+                              style: TextStyle(
+                                fontSize: 20.0,
+                                fontWeight: FontWeight.normal,
+                                color: Colors.white,
+                              ),
+                            ),
                             style: ButtonStyle(
                               backgroundColor:
                                   MaterialStateProperty.all(Colors.blueAccent),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quickbite/src/pages/signin_page.dart';
+import 'package:quickbite/src/pages/signup_page.dart';
 import '../widgets/order_card.dart';
 
 class OrderPage extends StatefulWidget {
@@ -12,12 +13,18 @@ class _OrderPageState extends State<OrderPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: ListView(
-        padding: EdgeInsets.symmetric(horizontal: 10.0),
-        scrollDirection: Axis.vertical,
-        children: <Widget>[
-          OrderCard(),
-          OrderCard(),
+      body: Column(
+        children: [
+          SizedBox(height: 40.0),
+          Expanded(
+            child: ListView(
+              padding: EdgeInsets.symmetric(horizontal: 20.0),
+              scrollDirection: Axis.vertical,
+              children: <Widget>[
+                OrderCard(),
+              ],
+            ),
+          ),
         ],
       ),
       bottomNavigationBar: _buildTotalContainer(),
@@ -26,7 +33,7 @@ class _OrderPageState extends State<OrderPage> {
 
   Widget _buildTotalContainer() {
     return Container(
-      height: 220.0,
+      height: 250.0,
       padding: EdgeInsets.only(
         left: 10.0,
         right: 10.0,
@@ -45,7 +52,7 @@ class _OrderPageState extends State<OrderPage> {
                     fontWeight: FontWeight.bold),
               ),
               Text(
-                "23.0",
+                "800.00",
                 style: TextStyle(
                     color: Color(0xFF6C6D6D),
                     fontSize: 16.0,
@@ -68,7 +75,7 @@ class _OrderPageState extends State<OrderPage> {
                     fontWeight: FontWeight.bold),
               ),
               Text(
-                "10.0",
+                "50.00",
                 style: TextStyle(
                     color: Color(0xFF6C6D6D),
                     fontSize: 16.0,
@@ -91,7 +98,7 @@ class _OrderPageState extends State<OrderPage> {
                     fontWeight: FontWeight.bold),
               ),
               Text(
-                "0.5",
+                "0.00",
                 style: TextStyle(
                     color: Color(0xFF6C6D6D),
                     fontSize: 16.0,
@@ -120,7 +127,7 @@ class _OrderPageState extends State<OrderPage> {
                     fontWeight: FontWeight.bold),
               ),
               Text(
-                "26.5",
+                "750.00",
                 style: TextStyle(
                     color: Color(0xFF6C6D6D),
                     fontSize: 16.0,
@@ -133,7 +140,8 @@ class _OrderPageState extends State<OrderPage> {
           ),
           GestureDetector(
             onTap: () {
-              Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => SigninPage()));
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (BuildContext context) => SignupPage()));
             },
             child: Container(
               height: 50.0,
