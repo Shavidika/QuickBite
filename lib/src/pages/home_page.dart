@@ -5,15 +5,15 @@ import 'package:quickbite/src/widgets/food_category.dart';
 import 'package:quickbite/src/widgets/home_top_info.dart';
 import 'package:quickbite/src/widgets/search.dart';
 
-import 'data/food_data.dart';
-import 'models/food_model.dart';
+import 'package:quickbite/src/data/food_data.dart';
+import 'package:quickbite/src/models/food_model.dart';
 
-class HomeScreen extends StatefulWidget {
+class HomePage extends StatefulWidget {
   @override
-  _HomeScreenState createState() => _HomeScreenState();
+  _HomePageState createState() => _HomePageState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _HomePageState extends State<HomePage> {
   List<Food> _foods = foods;
 
   @override
