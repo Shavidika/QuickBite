@@ -5,6 +5,8 @@ class OrderCard extends StatefulWidget {
 }
 
 class _OrderCardState extends State<OrderCard> {
+  int quantity = 1;
+
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -21,24 +23,36 @@ class _OrderCardState extends State<OrderCard> {
               ),
               width: 45.0,
               height: 80.0,
-              child: Padding(
-                padding: EdgeInsets.symmetric(
-                  horizontal: 10.0,
-                ),
+              child: Center(
                 child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center, // Align center
                   children: <Widget>[
                     InkWell(
-                        onTap: () {},
-                        child: Icon(Icons.keyboard_arrow_up,
-                            color: Color(0xFFD3D3D3))),
+                      onTap: () {
+                        setState(() {
+                          quantity++;
+                        });
+                      },
+                      child: Icon(Icons.keyboard_arrow_up,
+                          color: Color.fromARGB(255, 33, 33, 33)),
+                    ),
                     Text(
-                      "1",
-                      style: TextStyle(fontSize: 18.0, color: Colors.grey),
+                      quantity.toString(),
+                      style: TextStyle(
+                          fontSize: 18.0,
+                          color: const Color.fromARGB(255, 0, 0, 0)),
                     ),
                     InkWell(
-                        onTap: () {},
-                        child: Icon(Icons.keyboard_arrow_down,
-                            color: Color(0xFFD3D3D3))),
+                      onTap: () {
+                        if (quantity > 1) {
+                          setState(() {
+                            quantity--;
+                          });
+                        }
+                      },
+                      child: Icon(Icons.keyboard_arrow_down,
+                          color: Color.fromARGB(255, 14, 14, 14)),
+                    ),
                   ],
                 ),
               ),

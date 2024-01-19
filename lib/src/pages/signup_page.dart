@@ -29,7 +29,7 @@ class SignupPageState extends State<SignupPage> {
             children: <Widget>[
               Card(
                 color: Colors.black
-                    .withOpacity(0.7), // Dark color with 70% opacity
+                    .withOpacity(0.7), 
                 child: Padding(
                   padding: const EdgeInsets.all(20.0),
                   child: Column(
@@ -40,11 +40,11 @@ class SignupPageState extends State<SignupPage> {
                           fontSize: 40.0,
                           fontWeight: FontWeight.bold,
                           color: Colors
-                              .white, // Text color set to white for visibility
+                              .white, 
                         ),
                       ),
                       const SizedBox(
-                        height: 20.0, // Reduced height for better layout
+                        height: 20.0, 
                       ),
                       TextFormField(
                         controller: _usernameController,
@@ -52,7 +52,7 @@ class SignupPageState extends State<SignupPage> {
                           labelText: 'Username',
                           labelStyle: TextStyle(
                               color: Colors
-                                  .white), // Text color set to white for visibility
+                                  .white), 
                         ),
                       ),
                       TextFormField(
@@ -61,7 +61,7 @@ class SignupPageState extends State<SignupPage> {
                           labelText: 'Email',
                           labelStyle: TextStyle(
                               color: Colors
-                                  .white), // Text color set to white for visibility
+                                  .white), 
                         ),
                       ),
                       TextFormField(
@@ -70,7 +70,7 @@ class SignupPageState extends State<SignupPage> {
                           labelText: 'Password',
                           labelStyle: TextStyle(
                               color: Colors
-                                  .white), // Text color set to white for visibility
+                                  .white), 
                         ),
                         obscureText: true,
                       ),
@@ -79,7 +79,7 @@ class SignupPageState extends State<SignupPage> {
                       ),
                       ElevatedButton(
                           onPressed: () {
-                            // Handle sign up action here
+                            
                             print('Username: ${_usernameController.text}');
                             print('Email: ${_emailController.text}');
                             print('Password: ${_passwordController.text}');

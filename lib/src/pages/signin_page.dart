@@ -77,10 +77,9 @@ class SigninPageState extends State<SigninPage> {
                         height: 10.0,
                       ),
                       SizedBox(
-                        width: double.infinity, // Increase the width
+                        width: double.infinity, 
                         child: ElevatedButton(
                             onPressed: () {
-                              // Handle sign in action here
                               print('Username: ${_usernameController.text}');
                               print('Password: ${_passwordController.text}');
                             },

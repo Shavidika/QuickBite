@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:quickbite/src/data/food_data.dart';
 import 'package:quickbite/src/pages/signin_page.dart';
 import 'package:quickbite/src/pages/signup_page.dart';
+import 'package:quickbite/src/models/food_model.dart';
 import '../widgets/order_card.dart';
 
 class OrderPage extends StatefulWidget {
@@ -9,6 +11,8 @@ class OrderPage extends StatefulWidget {
 }
 
 class _OrderPageState extends State<OrderPage> {
+  List<Food> _foods = foods;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
